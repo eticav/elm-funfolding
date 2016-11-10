@@ -1,7 +1,7 @@
 {
-    "version": "1.0.0",
-    "summary": "helpful summary of your project, less than 80 characters",
-    "repository": "https://github.com/user/project.git",
+    "version": "1.0.1",
+    "summary": "Folding (by Composing) a list of functions by means of an accumulator function.",
+    "repository": "https://github.com/powet/elm-funfolding.git",
     "license": "BSD3",
     "source-directories": [
         "./src"
