@@ -1,4 +1,4 @@
-* Folding (Composing) a list of functions by means of an accumulator function.
+* Folding (by Composing) a list of functions by means of an accumulator function.
 
 Before showing how to write function that fold functions, let's go throw two simple use-cases: filtering with multiple predicate functions and sorting with multiple compare functions.
 
