@@ -1,5 +1,5 @@
 {
-    "version": "2.0.0",
+    "version": "3.0.0",
     "summary": "Folding (by Composing) a list of functions by means of an accumulator function.",
     "repository": "https://github.com/powet/elm-funfolding.git",
     "license": "BSD3",
