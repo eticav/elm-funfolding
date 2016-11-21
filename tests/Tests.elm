@@ -30,7 +30,7 @@ testAndN =
          let
            
            fun = FF.andN [(\x->isEven x)]
-           result = List.filter fun [1..10]
+           result = List.filter fun (List.range 1 10)
            expected = [2,4,6,8,10]
          in
            (Expect.equal result expected)
@@ -38,7 +38,7 @@ testAndN =
         \() ->
          let           
            fun = FF.andN [(\x->isEven x), (\x->x>5)]
-           result = List.filter fun [1..10]
+           result = List.filter fun (List.range 1 10)
            expected = [6,8,10]
          in
            (Expect.equal result expected)
@@ -50,7 +50,7 @@ testAndN =
                          , (\x->x>(-20))
                          , (\x->x<20)
                          , (\x->(rem x 10) == 0) ]
-           result = List.filter fun [-100..100]
+           result = List.filter fun (List.range -100 100)
            expected = [-10,10]
          in
            (Expect.equal result expected)
@@ -63,7 +63,7 @@ testOrN =
         \() ->
          let           
            fun = FF.orN [(\x->x==0), (\x->x<(-99)), (\x->x>99) ]
-           result = List.filter fun [-100..100]
+           result = List.filter fun (List.range -100 100)
            expected = [-100,0,100]
          in
            (Expect.equal result expected)
@@ -83,7 +83,7 @@ testAndNOrN =
                                   , (\x->x>(-20))
                                   ]
                         ]
-           result = List.filter fun [-100..100]
+           result = List.filter fun (List.range -100 100)
            expected = [-100,-14,-7,0,7,14,100]
          in
            (Expect.equal result expected)
